@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 90%;
+  position: relative;
+  max-width: 800px;
+  background: #111d4a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.card-title,
+.card-read-more,
+.card-btn {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-title {
+  color: #05cbe9;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+}
+
+.card-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card-btn {
+  font-size: 1.25rem;
+}
+
+.card-img {
+  object-fit: cover;
+  flex-basis: 200px; /* flex basis widthtir.Width yerine kullanılınca daha responsive oluyor.height width i eşitlemeye çalışıyor,flex basis'te de eşitlemeye çalışıyor. */
+  min-height: 0; /* flex basis'te bug oluşuyor tarayıcılarda bunlar şart kullanıyorsan eğer flex-basis'i */
+  min-width: 0; /* flex basis'te bug oluşuyor tarayıcılarda bunlar şart kullanıyorsan eğer flex-basis'i */
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-read-time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  opacity: 0.6;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+}
+
+#read-count {
+  font-weight: 900;
+  font-size: 1.25em;
+}
+
+.card-btn {
+  background-color: #05cbe9;
+  padding: 15px 20px;
+  color: #111d4a;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card-btn:hover {
+  background-color: gray;
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+  .card-img {
+    flex-basis: 50%;
+  }
+  .card-content {
+    width: 50%;
+  }
+}
